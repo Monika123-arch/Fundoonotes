@@ -1,0 +1,55 @@
+<div class="main-container">
+  <header class="header" style="background: white;border-bottom: 1px solid black;">
+    <div class="branding" fxLayoutAlign="left center">
+      <!-- <img src="../../../assets/images/bars-line.svg" height="26px" width="26px" (click)="resize()"> -->
+      <div  class="nav-link">
+        <cds-icon shape="bars" status="info" (click)="resize()"></cds-icon>        
+        <img src="../../../assets/images/keep.png" height=36px width=36px name="keep" alt="">
+        <a class="title" style="color:gray; font-weight: 600; font-size: large;"> Keep </a>
+      </div>
+    </div>
+    <form class="search-1" fxLayoutAlign="center center">
+      <!-- <label for="search_input"> -->
+      <input id="search_input" type="text" style="width: 800px; height: 70%; border-radius: 10px; background: rgb(248, 242, 248); border: none;" placeholder="Search"/>
+    <!-- </label> -->
+    </form>
+    <div class="header-actions">
+      <div class="nav-link nav-icon" aria-label="settings" fxLayoutAlign="center center">
+        <!-- <img src="../../../assets/icons/setting.svg" height=36px width=36px name="setting" alt=""> -->
+        <cds-icon shape="cog" status="info"></cds-icon>
+      </div>
+    </div>
+  </header>
+<div class="content-container">
+  <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed" style="background: white">
+    <a clrVerticalNavLink routerLink="./normal" routerLinkActive="active">
+      <cds-icon clrVerticalNavIcon shape="lightbulb" ></cds-icon>
+      <!-- <img src="../../../assets/icons/bulb.svg" height=20px width=20px name="Notes" alt=""> -->
+      Notes
+    </a>
+    <a clrVerticalNavLink routerLink="./electric" routerLinkActive="active">
+      <cds-icon clrVerticalNavIcon shape="bell"></cds-icon>
+      <!-- <img src="../../../assets/icons/bell.svg" height=20px width=20px name="Reminders" alt=""> -->
+      Reminders
+    </a>
+    <a clrVerticalNavLink routerLink="./poison" routerLinkActive="active">
+      <cds-icon clrVerticalNavIcon shape="pencil"></cds-icon>
+      <!-- <img src="../../../assets/icons/edit_1.svg" height=20px width=20px name="Edit" alt=""> -->
+      Edit labels
+    </a>
+    <a clrVerticalNavLink routerLink="./grass" routerLinkActive="active">
+      <cds-icon clrVerticalNavIcon shape="archive"></cds-icon>
+      <!-- <img src="../../../assets/icons/archive.svg" height=20px width=20px name="Archive" alt=""> -->
+      Archive
+    </a>
+    <a clrVerticalNavLink routerLink="./fighting" routerLinkActive="active">
+      <cds-icon clrVerticalNavIcon shape="trash"></cds-icon>
+      <!-- <img src="../../../assets/icons/trash.svg" height=20px width=20px name="Trash" alt=""> -->
+      Trash
+    </a>
+  </clr-vertical-nav>
+  <div  fxLayout="row" fxLayoutAlign="center start" class="content-area">
+    <app-display></app-display>
+  </div>
+</div>
+</div>
