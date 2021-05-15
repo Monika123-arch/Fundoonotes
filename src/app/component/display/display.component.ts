@@ -27,6 +27,7 @@ export class DisplayComponent implements OnInit {
   cardArray = [] as any;
 
   constructor(private formBuilder: FormBuilder, private userService: UserService) {
+  
     this.form = this.formBuilder.group({
       title: ['', [Validators.required]],
       description: ['',[Validators.required]]

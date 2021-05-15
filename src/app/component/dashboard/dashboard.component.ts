@@ -22,6 +22,8 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.collapsed = true;
+    
+   
   }
   public resize(){
     if(this.collapsed == true){
